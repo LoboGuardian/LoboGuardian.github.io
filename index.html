@@ -1,136 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>LoboGuardian portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page | LoboGuardian</title>
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<!-- Inicio del Body -->
-<body>
-  <nav class="grey darken-2" role="navigation">
-    <div class="nav-wrapper container" style="position: sticky"><a id="logo-container" href="#" class="brand-logo">LoboGuardian.github.io</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <!-- Dropdown-->
-        <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Proyectos</a></li>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="https://jarwarez.github.io">JARwareZ</a></li>
-            <li><a href="https://jobukai.github.io">Jobukai</a></li>
-        </ul>
+  <body>
+    <a href="#home" id="hero"><i class="fas fa-angle-up"></i></a>
+    <div class="bg-img"></div>
+
+    <header class="header-bar">
+      <div>
+        <h1 class="nome">Welcome to the World of the Internet!</h1>
+      </div>
+
+      <ul class="redes-sociais">
+        <li class="social-item">
+          <a
+            href="https://www.linkedin.com/in/gonzalezrbx/"
+            target="_blank"
+            alt="linkedin"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href="https://twitter.com/loboguardian_"
+            target="_blank"
+            alt="twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href="https://www.instagram.com/loboguardian_"
+            target="_blank"
+            alt="instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href="https://github.com/loboguardian"
+            target="_blank"
+            alt="github"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
       </ul>
+    </header>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Home</a></li>
-        <!-- Dropdown-->
-        <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Proyectos</a></li>
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="https://jarwarez.github.io">JARwareZ</a></li>
-            <li><a href="https://jobukai.github.io">Jobukai</a></li>
-        </ul>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center black-text">Welcome to the World of the Internet!</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">I'm Rafael González (aka LoboGuardian).</h5>
-        <img src="/assets/images/base.jpg" alt="" class="responsive-img">
-      </div>
-      <div class="row center">
-        <a href="#" id="download-button" class="btn-large waves-effect waves-light grey">Get Started</a>
-      </div>
-      <br><br>
-
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
- 
-      <!--   Icon Section   -->
-<!--      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
+    <nav class="menu-top" id="home">
+      <section class="home">
+        <div class="img">
+          <img src="https://github.com/loboguardian.png" class="foto" />
         </div>
+        <h2 class="profissao animate__animated animate__fadeInTopLeft">
+          Rafael González (LoboGuardian)
+        </h2>
+      </section>
+    </nav>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+    <main>
+      <section class="sobre-mim section wow fadeInUp" id="sobre-mim">
+        <!-- <div class="container">
+          <div class="menufotoLogo">
+              <img src="./img/logo.png" class="fotoLogo" />
+          </div> -->
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
+          <h2 class="profissao animate__animated animate__fadeInTopLeft">
+            Ingeniero de telecomunicaciones <br>
+            DevSecOps, Cloud & Networking <br>
+            Instructor STEAM | Juez WRO <br>
+            Creador de LinkedIn
+          </h2><br/>
+          <h1 class="titulo">Sobre Mi</h1>
+          <p class="descricao">
+            Fundador y creador de contenido en JARwareZ | Ingeniero de telecomunicaciones, linuxero y programador.
+            Me mueven los desafíos, me encanta cuando la gente me pide que resuelva un problema complejo. Me apasionan las comunidades y las personas,
+            Terminé transformando esta pasión en una empresa que hoy comparte conocimientos a través de Instagram, Youtube y cursos especializados.
+            como la tecnología de depuración.
+          </p>
+          
+          <h2 class="subtitulo">Curiosidades</h2><br/>
+          <p class="descricao">
+            <ul >
+              <li class="descricao">
+                - Me encanta la actividad física (Bicicleta, Calistenia, Boxeo y todo lo que me ponga en movimiento).
+              </li>
+              <li class="descricao">
+                - Me encantan los eventos, es difícil elegir a cuál no ir.
+              </li>
+            </ul>
+          </p>
         </div>
+      </section>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center black-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+      <section class="conhecimentos section" id="conhecimentos">
+        <div class="container">
+          <h1 class="titulo">Conocimiento principal</h1>
+          <ul class="conhecimentos-list">
+            <li class="conhecimento-item">
+              <span>
+                Reclutamiento y selección
+              </span>
+            </li>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
+            <li class="conhecimento-item">
+              <span>
+                Búsqueda avanzada en GitHub
+              </span>
+            </li>
 
-    </div> -->
-    <br><br>
-  </div>
+            <li class="conhecimento-item">
+              <span>
+                Escribir código con buenas prácticas
+              </span>
+            </li>
 
-  <footer class="page-footer grey" style="position: sticky; bottom: 0; left: 0; width: 100%;">
- <!--    <div class="container">
-      <div class="row"> -->
-        <!-- <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            <li class="conhecimento-item">
+              <span>
+                Producción de contenidos tecnológicos.
+              </span>
+            </li>
 
+            <li class="conhecimento-item">
+              <span>
+                <i class="fab fa-tech"></i>
+                Tecnología de depuración
+              </span>
+            </li>
 
-        </div> -->
-<!--         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li class="conhecimento-item">
+              <span>
+                <i class="fab fa-github"></i>
+                Avanzado
+              </span>
+            </li>
           </ul>
-        </div> -->
-<!--         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+        </div>
+      </section>
+
+      <section class="projetos section" id="projetos">
+        <div class="container">
+          <h1 class="titulo">Vacantes</h1><br/>
+          <p class="descricao">Hola Dev, tengo muchas vacantes importantes, si te gusta alguna, ¡llámame!</p>
+
+          <ul class="projects-list">
+            <li class="projects-item">
+              <h1 class="titulo">Dev BackEnd PHP 🔎</h1>
+              <p class="descricao">
+                ¿Interrumpido? ¡Intercambiemos una idea!
+              </p>
+              <div class="links-group">
+                <button type="button">
+                  <a href="https://www.linkedin.com/in/gonzalezrbx" target="_blank">Sepa mas</a>
+                </button>
+              </div>
+            </li>
+
+            <li class="projects-item">
+              <h1 class="titulo">Dev Angular </h1>
+              <p class="descricao">
+                ¿Coincidiste? charlemos ? Haz clic allí, te espero.
+              </p>
+              <div class="links-group">
+                <button type="button">
+                  <a href="https://www.linkedin.com/in/gonzalezrbx target="_blank">Saiba mais</a>
+                </button>
+              </div>
+            </li>
+
+            <li class="projects-item">
+              <h1 class="titulo">Dev Full Stack 🔎 🖥️</h1>
+              <p class="descricao">
+                ¿Coincidiste? charlemos ? Haz clic allí, te espero.
+              </p>
+              <div class="links-group">
+                <button type="button">
+                  <a href="https://www.linkedin.com/in/gonzalezrbx" target="_blank">Saiba mais</a>
+                </button>
+              </div>
+            </li>
+            
           </ul>
-        </div> -->
-<!--       </div>
-    </div> -->
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="black-text text-lighten-3" href="http://materializecss.com">LoboGuardian</a> with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </section>
+
+      <section class="projetos section" id="projetos">
+        <div class="container">
+          <h1 class="titulo">¡Llamame allá!</h1>
+          <p class="descricao">¡Me encantará charlar contigo sobre tecnología y personas!</p><br/>
+        <div> 
+        <a href="https://www.youtube.com/c/JARwareZ" target="_blank">
+          <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank">
+        </a>
+        
+        <a href="https://instagram.com/JARwareZ" target="_blank">
+          <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank">
+        </a>
+         <a href="https://www.twitch.tv/JARwareZ" target="_blank">
+          <img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white" target="_blank">
+        </a>
+        
+        <a href="https://discord.gg/loboguardian_" target="_blank">
+          <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank">
+        </a>
+        
+        <a href="mailto:jarwarez@gmail.com">
+          <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
+        </a>
+        
+        <a href="https://www.linkedin.com/in/gonzalezrbx" target="_blank">
+          <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+        </a> 
+        
+         <a href="" target="_blank">
+         <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank">
+        </a> 
       </div>
-    </div>
-  </footer>
+      </div>
+      </section>
 
+      <section>
+        <div class="menufotoLogo">
+          <p class="descricao">
+            Desarrollado en <a href="https://www.linkedin.com/company/jarwarez/"> <span class="descricao purpletText">JARwareZ</span></a>
+          </p>
+        </div>
+      </section>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/init.js"></script>
+    </main>
 
+    <script src="./js/jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
