@@ -1,0 +1,14 @@
+#language-toggle {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto negro */
+    border: 1px solid black; /* Borde negro, puedes cambiarlo según prefieras */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+#language-toggle option {
+    background-color: white; /* Fondo blanco para las opciones */
+    color: black; /* Texto negro para las opciones */
+}

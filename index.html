@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page | LoboGuardian</title>
     <meta name="theme-color" content="#000000" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/language.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <link
@@ -26,7 +22,10 @@
 
     <header class="header-bar">
       <div>
-        <h1 class="nome">Welcome to the World of the Internet! | Rafael González (LoboGuardian) </h1>
+        <h1 class="lang-es">¡Bienvenido al Mundo de Internet!</h1>
+        <h1 class="lang-en">Welcome to the World of the Internet!</h1>
+        <h1 class="lang-pt">Bem-vindo ao Mundo da Internet!</h1>
+        <h1 class="lang-de">Willkommen in der Welt des Internets!</h1>
       </div>
 
       <ul class="redes-sociais">
@@ -66,6 +65,15 @@
             <i class="fab fa-github"></i>
           </a>
         </li>
+        <li>
+          <!-- Menú desplegable para cambiar idioma -->
+          <select id="language-toggle">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </li>
       </ul>
     </header>
 
@@ -74,42 +82,126 @@
         <div class="img">
           <img src="https://github.com/loboguardian.png" class="foto" />
         </div>
-        <h2 class="profissao animate__animated animate__fadeInTopLeft">
+        <h2 class="profissao animate__animated animate__fadeInTopLeft lang-es">
           Rafael González (LoboGuardian)
+        </h2>
+        <h2 class="profissao animate__animated animate__fadeInTopLeft lang-en">
+          Rafael González (Wolf Guardian)
+        </h2>
+        <h2 class="profissao animate__animated animate__fadeInTopLeft lang-pt">
+          Rafael González (Lobo Guardião)
+        </h2>
+        <h2 class="profissao animate__animated animate__fadeInTopLeft lang-de">
+          Rafael González (Wolfwächter)
         </h2>
       </section>
     </nav>
 
     <main>
       <section class="sobre-mim section wow fadeInUp" id="sobre-mim">
+
         <!-- <div class="container">
           <div class="menufotoLogo">
               <img src="./img/logo.png" class="fotoLogo" />
           </div> -->
 
-          <h2 class="profissao animate__animated animate__fadeInTopLeft">
-            Ingeniero de telecomunicaciones <br>
-            DevSecOps, Cloud & Networking <br>
-            Instructor STEAM | Juez WRO <br>
-            Creador de LinkedIn
-          </h2><br/>
-          <h1 class="titulo">Sobre Mi</h1>
-          <p class="descricao">
+          <h2 class="profissao animate__animated animate__fadeInTopLeft lang-es">
+            Ingeniero de telecomunicaciones <br> DevSecOps, Cloud & Networking <br>
+            Instructor STEAM | Juez WRO <br> Creador de LinkedIn
+          </h2>
+          
+          <h2 class="profissao animate__animated animate__fadeInTopLeft lang-en">
+            Telecommunications Engineer <br> DevSecOps, Cloud & Networking <br>
+            STEAM Instructor | WRO Judge <br> LinkedIn Creator
+          </h2>
+          
+          <h2 class="profissao animate__animated animate__fadeInTopLeft lang-pt">
+            Engenheiro de telecomunicações <br> DevSecOps, Cloud & Networking <br>
+            Instrutor STEAM | Juiz WRO <br> Criador no LinkedIn
+          </h2>
+          
+          <h2 class="profissao animate__animated animate__fadeInTopLeft lang-de">
+            Telekommunikationsingenieur <br> DevSecOps, Cloud & Networking <br>
+            STEAM-Ausbilder | WRO-Richter <br> LinkedIn-Ersteller
+          </h2>
+          
+          <br/>
+
+          <h1 class="titulo lang-es">Sobre Mí</h1>
+          <h1 class="titulo lang-en">About Me</h1>
+          <h1 class="titulo lang-pt">Sobre Mim</h1>
+          <h1 class="titulo lang-de">Über Mich</h1>
+
+          <p class="descricao lang-es">
             Fundador y creador de contenido en JARwareZ | Ingeniero de telecomunicaciones, linuxero y programador.
             Me mueven los desafíos, me encanta cuando la gente me pide que resuelva un problema complejo. Me apasionan las comunidades y las personas,
             Terminé transformando esta pasión en una empresa que hoy comparte conocimientos a través de Instagram, Youtube y cursos especializados.
             como la tecnología de depuración.
           </p>
+
+          <p class="descricao lang-en">
+            Founder and content creator at JARwareZ | Telecommunications engineer, Linux enthusiast, and programmer.
+            I am driven by challenges, I love when people ask me to solve a complex problem. I am passionate about communities and people.
+            I ended up turning this passion into a company that now shares knowledge through Instagram, YouTube, and specialized courses,
+            such as debugging technology.
+          </p>
+
+          <p class="descricao lang-pt">
+            Fundador e criador de conteúdo na JARwareZ | Engenheiro de telecomunicações, entusiasta do Linux e programador.
+            Sou movido por desafios, adoro quando as pessoas me pedem para resolver um problema complexo. Sou apaixonado por comunidades e pessoas.
+            Acabei transformando essa paixão em uma empresa que agora compartilha conhecimento por meio do Instagram, YouTube e cursos especializados,
+            como tecnologia de depuração.
+          </p>
+
+          <p class="descricao lang-de">
+            Gründer und Inhaltsersteller bei JARwareZ | Telekommunikationsingenieur, Linux-Enthusiast und Programmierer.
+            Herausforderungen treiben mich an, ich liebe es, wenn Leute mich bitten, ein komplexes Problem zu lösen. Ich bin leidenschaftlich in Bezug auf Gemeinschaften und Menschen.
+            Ich habe diese Leidenschaft in ein Unternehmen verwandelt, das jetzt Wissen über Instagram, YouTube und spezialisierte Kurse teilt,
+            wie Debugging-Technologie.
+          </p>
           
-          <h2 class="subtitulo">Curiosidades</h2><br/>
+          <h2 class="subtitulo lang-es">Curiosidades</h2>
+          <h2 class="subtitulo lang-en">Fun Facts</h2>
+          <h2 class="subtitulo lang-pt">Curiosidades</h2>
+          <h2 class="subtitulo lang-de">Interessante Fakten</h2>
+
           <p class="descricao">
             <ul >
-              <li class="descricao">
+
+              <li class="descricao lang-es">
                 - Me encanta la actividad física (Bicicleta, Calistenia, Boxeo y todo lo que me ponga en movimiento).
               </li>
-              <li class="descricao">
+              
+              <li class="descricao lang-en">
+                - I love physical activity (Cycling, Calisthenics, Boxing, and anything that keeps me moving).
+              </li>
+
+              <li class="descricao lang-pt">
+                - Adoro atividades físicas (Ciclismo, Calistenia, Boxe e qualquer coisa que me mantenha em movimento).
+              </li>
+
+              <li class="descricao lang-de">
+                - Ich liebe körperliche Aktivitäten (Radfahren, Calisthenics, Boxen und alles, was mich in Bewegung hält).
+              </li>
+
+
+
+              <li class="descricao  lang-es">
                 - Me encantan los eventos, es difícil elegir a cuál no ir.
               </li>
+
+              <li class="descricao lang-en">
+                - I love events, it's hard to choose which one not to attend.
+              </li>
+
+              <li class="descricao lang-pt">
+                - Adoro eventos, é difícil escolher a qual não ir.
+              </li>
+
+              <li class="descricao lang-de">
+                - Ich liebe Veranstaltungen, es ist schwer zu entscheiden, auf welches ich nicht gehen soll.
+              </li>
+
             </ul>
           </p>
         </div>
@@ -117,45 +209,139 @@
 
       <section class="conhecimentos section" id="conhecimentos">
         <div class="container">
-          <h1 class="titulo">Conocimiento principal</h1>
+
+          <h1 class="titulo lang-es">Conocimiento principal</h1>
+          <h1 class="titulo lang-en">Core Knowledge</h1>
+          <h1 class="titulo lang-pt">Conhecimento Principal</h1>
+          <h1 class="titulo lang-de">Kernwissen</h1>
+          
           <ul class="conhecimentos-list">
-            <li class="conhecimento-item">
+            
+            <li class="conhecimento-item lang-es">
               <span>
-                Reclutamiento y selección
+                <i class="fas fa-user"></i>Reclutamiento y selección
+              </span>
+            </li>
+            <li class="conhecimento-item lang-en">
+              <span>
+                <i class="fas fa-user"></i>Recruitment and selection
+              </span>
+            </li>
+            <li class="conhecimento-item lang-pt">
+              <span>
+                <i class="fas fa-user"></i>Recrutamento e seleção
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span>
+                <i class="fas fa-user"></i>Rekrutierung und Auswahl
               </span>
             </li>
 
-            <li class="conhecimento-item">
+            <li class="conhecimento-item lang-es">
               <span>
-                Búsqueda avanzada en GitHub
+                <i class="fas fa-search"></i>Búsqueda avanzada en GitHub
+              </span>
+            </li>
+            <li class="conhecimento-item lang-en">
+              <span>
+                <i class="fas fa-search"></i>Advanced search on GitHub
+              </span>
+            </li>
+            <li class="conhecimento-item lang-pt">
+              <span>
+                <i class="fas fa-search"></i>Pesquisa avançada no GitHub
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span>
+                <i class="fas fa-search"></i>Erweiterte Suche auf GitHub
               </span>
             </li>
 
-            <li class="conhecimento-item">
+            <li class="conhecimento-item lang-es">
               <span>
-                Escribir código con buenas prácticas
+                <i class="fas fa-code"></i>Escribir código con buenas prácticas
+              </span>
+            </li>
+            <li class="conhecimento-item lang-en">
+              <span>
+                <i class="fas fa-code"></i>Writing code with best practices
+              </span>
+            </li>
+            <li class="conhecimento-item lang-pt">
+              <span>
+                <i class="fas fa-code"></i>Escrever código com boas práticas
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span>
+                <i class="fas fa-code"></i>Schreiben von Code mit Best Practices
+              </span>
+            </li>          
+
+            <li class="conhecimento-item lang-es">
+              <span>
+                <i class="fas fa-cogs"></i>Producción de contenidos tecnológicos.
+              </span>
+            </li>
+            <li class="conhecimento-item lang-en">
+              <span>
+                <i class="fas fa-cogs"></i>Production of technological content.
+              </span>
+            </li>
+            <li class="conhecimento-item lang-pt">
+              <span>
+                <i class="fas fa-cogs"></i>Produção de conteúdo tecnológico.
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span>
+                <i class="fas fa-cogs"></i>Produktion von technologischen Inhalten.
               </span>
             </li>
 
-            <li class="conhecimento-item">
+            <li class="conhecimento-item lang-es">
               <span>
-                Producción de contenidos tecnológicos.
-              </span>
-            </li>
-
-            <li class="conhecimento-item">
-              <span>
-                <i class="fab fa-tech"></i>
+                <i class="fas fa-bug"></i>
                 Tecnología de depuración
               </span>
             </li>
-
-            <li class="conhecimento-item">
+            <li class="conhecimento-item lang-en">
               <span>
-                <i class="fab fa-github"></i>
-                Avanzado
+                <i class="fas fa-bug"></i> 
+                Debugging technology
               </span>
             </li>
+            <li class="conhecimento-item lang-pt">
+              <span>
+                <i class="fas fa-bug"></i>
+                Tecnologia de depuração
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span>
+                <i class="fas fa-bug"></i>
+                Debugging-Technologie
+              </span>
+            </li>
+
+            <li class="conhecimento-item lang-es">
+              <span><i class="fab fa-github"></i>
+                Avanzado</span>
+            </li>
+            <li class="conhecimento-item lang-en">
+              <span><i class="fab fa-github"></i>
+                Advanced</span>
+            </li>
+            <li class="conhecimento-item lang-pt">
+              <span><i class="fab fa-github"></i>Avançado
+              </span>
+            </li>
+            <li class="conhecimento-item lang-de">
+              <span><i class="fab fa-github"></i>Fortgeschritten</span>
+            </li>
+
           </ul>
         </div>
       </section>
@@ -206,11 +392,12 @@
         </div>
       </section> -->
 
-      <section class="projetos section" id="projetos">
+      <!-- <section class="projetos section" id="projetos">
         <div class="container">
-          <h1 class="titulo">¡Contactame!</h1>
-          <p class="descricao">¡Me encantaría charlar contigo sobre tecnología!</p><br/>
+          <h1 class="titulo lang-es">¡Contactame!</h1>
+          <p class="descricao lang-es">¡Me encantaría charlar contigo sobre tecnología!</p><br/>
         <div> 
+
         <a href="https://www.youtube.com/c/JARwareZ" target="_blank">
           <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank">
         </a>
@@ -239,12 +426,21 @@
         </a> 
       </div>
       </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="menufotoLogo">
-          <p class="descricao">
+          <p class="descricao lang-es">
             Desarrollado en <a href="https://www.linkedin.com/company/jarwarez/"> <span class="descricao purpletText">JARwareZ</span></a>
+          </p>
+          <p class="descricao lang-en">
+            Developed at <a href="https://www.linkedin.com/company/jarwarez/"> <span class="descricao purpletText">JARwareZ</span></a>
+          </p>
+          <p class="descricao lang-pt">
+            Desenvolvido na <a href="https://www.linkedin.com/company/jarwarez/"> <span class="descricao purpletText">JARwareZ</span></a>
+          </p>
+          <p class="descricao lang-de">
+            Entwickelt bei <a href="https://www.linkedin.com/company/jarwarez/"> <span class="descricao purpletText">JARwareZ</span></a>
           </p>
         </div>
       </section>
@@ -264,5 +460,6 @@
     ></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/language.js"></script>
   </body>
 </html>
