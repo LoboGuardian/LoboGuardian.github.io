@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (userLang.startsWith("hi")) {
         setLanguage("hi");
     } else {
-        setLanguage("en"); // Idioma por defecto si el idioma del navegador no está soportado
+        setLanguage("es"); // Idioma por defecto si el idioma del navegador no está soportado
     }
 
     // Cambiar idioma cuando se selecciona una opción del menú
