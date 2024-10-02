@@ -1,58 +1,60 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtener el menú desplegable de idiomas
+    // Obtain the language dropdown menu
     const languageToggle = document.getElementById("language-toggle");
-
-    // Obtener el idioma del navegador
+  
+    // Get the user's preferred language
     const userLang = navigator.language || navigator.userLanguage;
-    
-    // Detectar idioma por defecto basado en el navegador
+  
+    // Detect default language based on browser
     if (userLang.startsWith("es")) {
-        setLanguage("es");
+      setLanguage("es");
     } else if (userLang.startsWith("en")) {
-        setLanguage("en");
+      setLanguage("en");
     } else if (userLang.startsWith("pt")) {
-        setLanguage("pt");
+      setLanguage("pt");
     } else if (userLang.startsWith("de")) {
-        setLanguage("de");
+      setLanguage("de");
     } else if (userLang.startsWith("fr")) {
-        setLanguage("fr");
+      setLanguage("fr");
     } else if (userLang.startsWith("it")) {
-        setLanguage("it");
+      setLanguage("it");
     } else if (userLang.startsWith("zh")) {
-        setLanguage("zh");
+      setLanguage("zh");
     } else if (userLang.startsWith("ar")) {
-        setLanguage("ar");
+      setLanguage("ar");
     } else if (userLang.startsWith("ru")) {
-        setLanguage("ru");
+      setLanguage("ru");
     } else if (userLang.startsWith("ja")) {
-        setLanguage("ja");
+      setLanguage("ja");
     } else if (userLang.startsWith("ko")) {
-        setLanguage("ko");
+      setLanguage("ko");
     } else if (userLang.startsWith("hi")) {
-        setLanguage("hi");
+      setLanguage("hi");
     } else {
-        setLanguage("es"); // Idioma por defecto si el idioma del navegador no está soportado
+      setLanguage("es"); // Default language if not supported
     }
-
-    // Cambiar idioma cuando se selecciona una opción del menú
+  
+    // Change language on option selection
     languageToggle.addEventListener("change", function () {
-        const selectedLanguage = languageToggle.value;
-        setLanguage(selectedLanguage);
+      const selectedLanguage = languageToggle.value;
+      setLanguage(selectedLanguage);
     });
-
-    // Función para mostrar el idioma seleccionado y ocultar los demás
+  
+    // Function to show selected language content and hide others
     function setLanguage(lang) {
-        const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];;
-        
-        supportedLanguages.forEach(function (language) {
-            const elements = document.querySelectorAll(`.lang-${language}`);
-            elements.forEach(function (element) {
-                if (language === lang) {
-                    element.style.display = "block";
-                } else {
-                    element.style.display = "none";
-                }
-            });
+      const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];
+  
+      supportedLanguages.forEach(function (language) {
+        const elements = document.querySelectorAll(`.lang-${language}`);
+        elements.forEach(function (element) {
+          if (language === lang) {
+            element.style.display = "block";
+            // Update the selected option in the dropdown
+            languageToggle.value = lang;  // This line is added
+          } else {
+            element.style.display = "none";
+          }
         });
+      });
     }
-});
+  });
