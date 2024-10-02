@@ -654,17 +654,37 @@ main {
 
 /* language-toggle */
 #language-toggle {
-  background-color: transparent; /* Fondo transparente */
-  color: white; /* Texto negro */
-  border: 1px solid black; /* Borde negro, puedes cambiarlo según prefieras */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 5px; /* Esquinas redondeadas */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cambiar cursor al pasar por encima */
-  /*appearance: none; */ /*Elimina la apariencia por defecto del navegador */
+  background-color: transparent; /* Transparent background */
+  color: white; /* Black text */
+  border: 1px solid black; /* Black border, customizable */
+  padding: 10px; /* Internal spacing */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor on hover */
+  /*appearance: none; */ /* Remove default browser appearance */
 }
 
 #language-toggle option {
-  background-color: white; /* Fondo blanco para las opciones */
-  color: black; /* Texto negro para las opciones */
+  background-color: white; /* White background for options */
+  color: black; /* Black text for options */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  #language-toggle option {
+    display: none; /* Hide text options on mobile */
+  }
+
+  #language-toggle::after {
+    content: attr(data-flag); /* Display the flag image */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px; /* Adjust flag size as needed */
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none; /* Prevent clicking on the flag */
+  }
 }
