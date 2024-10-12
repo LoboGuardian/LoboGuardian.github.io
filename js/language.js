@@ -1,60 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtain the language dropdown menu
-    const languageToggle = document.getElementById("language-toggle");
   
-    // Get the user's preferred language
-    const userLang = navigator.language || navigator.userLanguage;
+  const languageToggle = document.getElementById("language-toggle");
+  const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];
   
-    // Detect default language based on browser
-    if (userLang.startsWith("es")) {
-      setLanguage("es");
-    } else if (userLang.startsWith("en")) {
-      setLanguage("en");
-    } else if (userLang.startsWith("pt")) {
-      setLanguage("pt");
-    } else if (userLang.startsWith("de")) {
-      setLanguage("de");
-    } else if (userLang.startsWith("fr")) {
-      setLanguage("fr");
-    } else if (userLang.startsWith("it")) {
-      setLanguage("it");
-    } else if (userLang.startsWith("zh")) {
-      setLanguage("zh");
-    } else if (userLang.startsWith("ar")) {
-      setLanguage("ar");
-    } else if (userLang.startsWith("ru")) {
-      setLanguage("ru");
-    } else if (userLang.startsWith("ja")) {
-      setLanguage("ja");
-    } else if (userLang.startsWith("ko")) {
-      setLanguage("ko");
-    } else if (userLang.startsWith("hi")) {
-      setLanguage("hi");
-    } else {
-      setLanguage("es"); // Default language if not supported
-    }
+  // Determine user's preferred language or fallback
+  const userLang = navigator.language.split('-')[0];
+  const defaultLang = supportedLanguages.includes(userLang) ? userLang : "es";
   
-    // Change language on option selection
-    languageToggle.addEventListener("change", function () {
-      const selectedLanguage = languageToggle.value;
-      setLanguage(selectedLanguage);
-    });
+  // Initialize language setting
+  setLanguage(defaultLang);
   
-    // Function to show selected language content and hide others
-    function setLanguage(lang) {
-      const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];
-  
-      supportedLanguages.forEach(function (language) {
-        const elements = document.querySelectorAll(`.lang-${language}`);
-        elements.forEach(function (element) {
-          if (language === lang) {
-            element.style.display = "block";
-            // Update the selected option in the dropdown
-            languageToggle.value = lang;  // This line is added
-          } else {
-            element.style.display = "none";
-          }
-        });
-      });
-    }
+  // Event Listener for language change
+  languageToggle.addEventListener("change", (event) => {
+    setLanguage(event.target.value);
   });
+  
+  // Function to set displayed language
+  function setLanguage(lang) {
+    // Hide all language elements, then show the selected language
+    supportedLanguages.forEach((language) => {
+      const elements = document.querySelectorAll(`.lang-${language}`);
+      elements.forEach((element) => {
+        element.style.display = (language === lang) ? "block" : "none";
+      });
+    });
+    
+    // Update the dropdown value to selected language
+    languageToggle.value = lang;
+  }
+});

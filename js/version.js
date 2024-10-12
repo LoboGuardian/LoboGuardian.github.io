@@ -30,7 +30,7 @@ const generateCurrentWeekVersion = () => {
     const quarter = getQuarter(today);
     const patchVersion = calculatePatchVersion(today);
     
-    return `K${currentYear}.${quarter}.${weekNumber}.${patchVersion}`;
+    return `${currentYear}.${quarter}.${weekNumber}.${patchVersion}`;
 };
 
 const appendVersionToHTML = () => {

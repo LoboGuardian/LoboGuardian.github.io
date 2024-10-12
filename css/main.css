@@ -49,7 +49,7 @@ span {
 }
 
 .bg-img {
-  background-image: url(../img/bg-techrecruiter.png);
+  background-image: url(../img/bg.png);
   background-position: center;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -64,13 +64,14 @@ span {
   opacity: 0.2;
 }
 
-.titulo {
+.title  
+ {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 900;
   font-size: 1.7rem;
 }
 
-.subtitulo {
+.subtitle {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 900;
   font-size: 1.5rem;
@@ -78,35 +79,36 @@ span {
   margin-top: 10px;
 }
 
-.profissao {
+.profession {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 30px;
 }
+
 @media (min-width: 1024px) {
-  .titulo {
+  .title {
     font-size: 2.5rem;
   }
 
-  .subtitulo {
+  .subtitle {
     font-size: 1.6rem;
   }
 
-  .profissao {
+  .profession {
     font-size: 3rem;
   }
 }
 
-.descricao {
+.description {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
 @media (min-width: 1024px) {
-  .descricao {
+  .description {
     font-size: 1.2rem;
   }
 }
@@ -156,22 +158,22 @@ span {
   position: relative;
 }
 
-.header-bar .redes-sociais {
+.header-bar .social-media {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-bar .redes-sociais.redes-sociais .social-item .fab,
-.header-bar .redes-sociais.redes-sociais .social-item .fas {
+.header-bar .social-media.social-media .social-item .fab,
+.header-bar .social-media.social-media .social-item .fas {
   font-size: 1.2rem;
   margin: 0 10px;
   transition: transform 350ms ease;
 }
 
-.redes-sociais .social-item .fab:hover,
-.redes-sociais .social-item .fas:hover {
+.social-media .social-item .fab:hover,
+.social-media .social-item .fas:hover {
   transform: translateY(5px);
 }
 
@@ -254,7 +256,7 @@ span {
   }
 }
 
-.menufotoLogo {
+.menuphotoLogo {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -264,7 +266,7 @@ span {
   color: aqua;
 }
 
-.fotoLogo {
+.photoLogo {
   width: 300px;
   height: 85;
   border-radius: 10px;
@@ -310,21 +312,21 @@ span {
   }
 }
 
-.menu-top .home .descricao {
+.menu-top .home .description {
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
 }
 
 @media (min-width: 1024px) {
-  .menu-top .home .descricao {
+  .menu-top .home .description {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .menu-top .home .redes-sociais .social-item .fab,
-  .menu-top .home .redes-sociais .social-item .fas {
+  .menu-top .home .social-media .social-item .fab,
+  .menu-top .home .social-media .social-item .fas {
     font-size: 2.2rem;
     margin: 0 15px;
   }
@@ -354,86 +356,86 @@ main {
 }
 
 @media (min-width: 1250px) {
-  .sobre-mim p {
+  .about-me p {
     font-size: 1.9rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .sobre-mim p {
+  .about-me p {
     font-size: 1.5rem;
   }
 }
-.sobre-mim p {
+.about-me p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
 }
-.sobre-mim p a {
+.about-me p a {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
-.experiencias {
+.experiences {
   font-family: "Lexend Deca", sans-serif;
 }
-.experiencias .exp-item {
+.experiences .exp-item {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
 }
-.experiencias .exp-item .empresa {
+.experiences .exp-item .enterprise {
   font-weight: 900;
   font-size: 1.2rem;
 }
 
 @media (min-width: 1024px) {
-  .experiencias .exp-item .empresa {
+  .experiences .exp-item .enterprise {
     font-size: 1.45rem;
   }
 }
 
-.experiencias .exp-item .duracao {
+.experiences .exp-item .duration {
   font-weight: 900;
   font-size: 1rem;
 }
 
 @media (min-width: 1024px) {
-  .experiencias .exp-item .duracao {
+  .experiences .exp-item .duration {
     font-size: 1.2rem;
   }
 }
 
-.experiencias .exp-item .cargo {
+.experiences .exp-item .position {
   font-weight: 900;
   font-size: 1rem;
 }
 
 @media (min-width: 1024px) {
-  .experiencias .exp-item .cargo {
+  .experiences .exp-item .position {
     font-size: 1.25rem;
   }
 }
 
-.experiencias .exp-item .duracao,
-.experiencias .exp-item .cargo,
-.experiencias .exp-item .descricao {
+.experiences .exp-item .duration,
+.experiences .exp-item .position,
+.experiences .exp-item .description {
   margin: 2px 0;
   font-size: 1rem;
 }
 
 @media (min-width: 1250px) {
-  .experiencias .exp-item .descricao {
+  .experiences .exp-item .description {
     font-size: 1.9rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .experiencias .exp-item .descricao {
+  .experiences .exp-item .description {
     font-size: 1.2rem;
   }
 }
 
-.conhecimentos .conhecimentos-list {
+.knowledge .knowledge-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -442,12 +444,12 @@ main {
 }
 
 @media (min-width: 1024px) {
-  .conhecimentos .conhecimentos-list {
+  .knowledge .knowledge-list {
     flex-direction: row;
   }
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item {
+.knowledge .knowledge-list .knowledge-item {
   width: calc(100% - 10px);
   height: 60px;
   margin: 5px auto;
@@ -465,11 +467,11 @@ main {
   transition: all 350ms ease;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item:hover {
+.knowledge .knowledge-list .knowledge-item:hover {
   background: transparent;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item span {
+.knowledge .knowledge-list .knowledge-item span {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -478,66 +480,66 @@ main {
   font-size: 1.3rem;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item strong {
+.knowledge .knowledge-list .knowledge-item strong {
   color: #000;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item i {
+.knowledge .knowledge-list .knowledge-item i {
   font-size: 3rem;
   color: #000;
   margin-right: 10px;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item:hover i {
+.knowledge .knowledge-list .knowledge-item:hover i {
   color: #fff;
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item:hover span,
-.conhecimentos .conhecimentos-list .conhecimento-item:hover strong {
+.knowledge .knowledge-list .knowledge-item:hover span,
+.knowledge .knowledge-list .knowledge-item:hover strong {
   color: #fff;
 }
 
 @media (min-width: 767px) {
-  .conhecimentos .conhecimentos-list .conhecimento-item {
+  .knowledge .knowledge-list .knowledge-item {
     width: calc(100% / 3 - 25px);
     margin: 5px;
   }
 }
 
-.conhecimentos .conhecimentos-list .conhecimento-item span {
+.knowledge .knowledge-list .knowledge-item span {
   font-size: 1.1rem;
 }
-.conhecimentos .conhecimentos-list .conhecimento-item span strong {
+.knowledge .knowledge-list .knowledge-item span strong {
   font-size: 1.1rem;
 }
 
-.projetos .descricao {
+.projects .description {
   font-size: 1rem;
 }
-.projetos .projects-item .descricao {
+.projects .projects-item .description {
   font-size: 1rem;
   color: #fff;
 }
 
 @media (min-width: 1250px) {
-  .projetos .descricao {
+  .projects .description {
     font-size: 1.8rem;
   }
-  .projetos .projects-item .descricao {
+  .projects .projects-item .description {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .projetos .descricao {
+  .projects .description {
     font-size: 1rem;
   }
-  .projetos .projects-item .descricao {
+  .projects .projects-item .description {
     font-size: 1rem;
   }
 }
 
-.projetos .projects-list {
+.projects .projects-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -545,7 +547,7 @@ main {
   margin: 20px auto 10px;
 }
 
-.projetos .projects-list .projects-item {
+.projects .projects-list .projects-item {
   width: calc(100% - 20px);
   min-height: 200px;
   border: 1px solid #fff;
@@ -559,31 +561,31 @@ main {
 }
 
 @media (min-width: 720px) {
-  .projetos .projects-list .projects-item {
+  .projects .projects-list .projects-item {
     width: calc(100% / 2 - 20px);
   }
 }
 
 @media (min-width: 1024px) {
-  .projetos .projects-list .projects-item {
+  .projects .projects-list .projects-item {
     width: calc(100% / 3 - 20px);
   }
 
-  /* .projetos .projects-list .projects-item button{
+  /* .projects .projects-list .projects-item button{
     min-width: 200px;
   } */
 }
 
-.projetos .projects-list .projects-item .titulo {
+.projects .projects-list .projects-item .titulo {
   font-size: 1.3rem;
   color: #fff;
 }
 
-.projetos .projects-list .projects-item .descricao {
+.projects .projects-list .projects-item .description {
   text-align: center;
 }
 
-.projetos .projects-list .projects-item .links-group {
+.projects .projects-list .projects-item .links-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -593,11 +595,11 @@ main {
   color: #fff;
 }
 
-.projetos .projects-list .projects-item .links-group i {
+.projects .projects-list .projects-item .links-group i {
   font-size: 1.5rem;
 }
 
-.projetos .projects-list .projects-item button {
+.projects .projects-list .projects-item button {
   height: 40px;
   width: calc(100% / 2 - 5px);
   padding: 5px;
@@ -610,7 +612,7 @@ main {
   /* color: rgb(0, 34, 255); */
 }
 
-.projetos .projects-list .projects-item button a {
+.projects .projects-list .projects-item button a {
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -619,37 +621,58 @@ main {
 }
 
 /* @media (min-width: 540px){
-  .projetos .projects-list .projects-item button{
+  .projects .projects-list .projects-item button{
     min-width: 170px;
   }
 } */
 
-.projetos .projects-list .projects-item button:hover {
+.projects .projects-list .projects-item button:hover {
   background: #fff;
 }
 
-.projetos .projects-list .projects-item button:hover a {
+.projects .projects-list .projects-item button:hover a {
   color: #fff;
 }
 
-.projetos .projects-list .projects-item button:hover i {
+.projects .projects-list .projects-item button:hover i {
   color: #000;
 }
 
 @media (min-width: 1250px) {
-  .habilidades .descricao {
+  .skills .description {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .habilidades .descricao {
+  .skills .description {
     font-size: 1.2rem;
   }
 }
 
-.habilidades .descricao {
+.skills .description {
   font-size: 1.2rem;
+}
+
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  padding: 10px 15px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background: rgb(0, 0, 0);
+}
+
+.footer-bar .nome {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.2rem;
+  position: relative;
 }
 
 /* language-toggle */
@@ -699,4 +722,5 @@ select#language-toggle {
   select#language-toggle option:hover::after {
     background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
   }
+  
 }
