@@ -1,21 +1,60 @@
-const body = document.querySelector('body');
+// fade-in.js
+// Wait for the DOM to load
+// document.addEventListener("DOMContentLoaded", function() {
+    // Add the 'fade-in' class to the body after the content is loaded
+    // document.body.classList.add('fade-in');
 
-const animation = new TimelineMax();
+// year.js
+function displayCurrentYear() {
+    const nowYear = new Date().getFullYear();
+    document.getElementById('year-now').textContent = nowYear;
+}
 
-animation.fromTo(body , 2, {opacity: "0"}, {opacity: "1"}, Power2.easeIn);
+window.onload = displayCurrentYear;
 
+// version.js
 
-(function( $ ){
-    $( document ).ready(function() {
-        $('#hero').click(function(){
-          $('html, body').animate({scrollTop : 0},1500,)
-        });
-    });
+const currentYear = new Date().getFullYear();
+const today = new Date(); // Get today's date
+
+const getISOWeekNumber = (date) => {
+    const tempDate = new Date(date.valueOf());
+    const dayNum = (tempDate.getUTCDay() + 6) % 7; // Adjust to make Monday the first day of the week
+    tempDate.setUTCDate(tempDate.getUTCDate() + 4 - dayNum); // Set to Thursday of the week
+    const yearStart = new Date(Date.UTC(tempDate.getUTCFullYear(), 0, 1));
+    return Math.ceil((((tempDate - yearStart) / 1000) / 60 / 60 / 24 + 1) / 7);
+};
+
+const getQuarter = (date) => {
+    const month = date.getMonth();
+    if (month < 3) return 'Q1';
+    if (month < 6) return 'Q2';
+    if (month < 9) return 'Q3';
+    return 'Q4';
+};
+
+const calculatePatchVersion = (date) => {
+    const dayOfWeek = date.getUTCDay(); // Sunday is 0, Monday is 1, ..., Saturday is 6
+    return (dayOfWeek + 1) * 3; // Adjust for patch version (Mon=3, ..., Sat=18)
+};
+
+// Function to generate version for the current week
+const generateCurrentWeekVersion = () => {
+    const weekNumber = getISOWeekNumber(today);
+    const quarter = getQuarter(today);
+    const patchVersion = calculatePatchVersion(today);
     
-    var date = new Date();
-    var year = date.getFullYear();
-    var yearOld = year - 1998;
+    return `${currentYear}.${quarter}.${weekNumber}.${patchVersion}`;
+};
 
-    $('.sobre-mim .descricao span').html(yearOld);
+const appendVersionToHTML = () => {
+    const version = generateCurrentWeekVersion();
+    const versionList = document.getElementById('version-list');
     
-})( jQuery );
+    const li = document.createElement('li');
+    li.textContent = version;
+    versionList.appendChild(li);
+};
+
+// Call the function to append the version when the document is loaded
+document.addEventListener('DOMContentLoaded', appendVersionToHTML);

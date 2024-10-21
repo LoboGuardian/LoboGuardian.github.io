@@ -11,7 +11,17 @@ body,
 
 body {
   background-color: #000;
+  /* Start completely transparent */
+  /* opacity: 0;  */
+  /* CSS transition for the opacity change */
+  /* transition: opacity 2s ease-in; */
 }
+
+/* body.fade-in { */
+  /* End up fully opaque */
+  /* End at 20% opacity */
+  /* opacity: 0.2;  */
+/* } */
 
 p {
   margin: 0;
@@ -578,7 +588,7 @@ main {
   } */
 }
 
-.projects .projects-list .projects-item .titulo {
+.projects .projects-list .projects-item .title {
   font-size: 1.3rem;
   color: #fff;
 }
