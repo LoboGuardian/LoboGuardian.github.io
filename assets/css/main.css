@@ -1,94 +1,187 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Roboto:wght@400;700;900&display=swap");
 
-body,
-* {
+/* General resets and settings */
+body, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
+  /* Default text color set to white */
   color: #fff;
 }
 
 body {
-  background-color: #000;
-  /* Start completely transparent */
-  /* opacity: 0;  */
-  /* CSS transition for the opacity change */
+  background-color: #000; /* Background set to black */
+  /* Uncomment to add fade-in effect */
+  /* opacity: 0; */
   /* transition: opacity 2s ease-in; */
 }
 
-/* body.fade-in { */
-  /* End up fully opaque */
-  /* End at 20% opacity */
-  /* opacity: 0.2;  */
-/* } */
+/* Uncomment to apply fade-in effect */
+/* body.fade-in {
+  opacity: 0.2; 
+} */
 
-/* Button styling */
+/* General Styles for the Welcome Section */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: auto;
+  text-align: center;
+  margin: 20px;
+}
+
+#welcome-section h1 {
+  font-size: 1.5rem; /* Default font size for larger screens */
+  margin: 10px 0;
+}
+
+/* Toggle Sidebar Button */
 #toggleSidebar {
-  background-color: black; /* Set the background color to black */
-  color: white;            /* Set the text color to white */
-  border: none;           /* Remove the default border */
-  padding: 10px 20px;     /* Add some padding for better appearance */
-  cursor: pointer;        /* Change the cursor to indicate it's clickable */
-  font-size: 16px;        /* Set the font size */
-  border-radius: 25px;       /* More rounded corners on hover */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  /* Button background */
+  background-color: black;
+  /* Button text color */
+  color: white;
+  /* Removing default button border */
+  border: none;
+  /* Button padding */
+  padding: 10px 20px;
+  /* Cursor pointer to indicate clickability */
+  cursor: pointer;
+  /* Button font size */
+  /* font-size: 16px; */
+  /* Rounded button */
+  border-radius: 25px;
+  /* Smooth hover transition */
+  transition: background-color 0.3s;
+  /* Needed for positioning the hamburger icon */
+  position: relative;
+}
+
+.hamburger-icon {
+  display: none; /* Hidden by default */
+  font-size: 2rem; /* Size of the hamburger icon */
+}
+
+/* Adjust the font size and layout on smaller screens */
+@media (max-width: 768px) {
+
+  .welcome-section {
+    padding: 0px;
+    /* display: none; */
+    margin: 0px;
+    justify-content: normal;
+    align-items: normal;
+  }
+
+  #welcome-section h1 {
+    font-size: 1rem; /* Smaller font size for tablet and below */
+  }
+
+  #toggleSidebar {
+    padding: 10px 10px; /* Smaller padding on smaller screens */
+    border-radius: 8px; /* Smaller border-radius for mobile */
+  }
+}
+
+/* Further adjustments for mobile screens */
+@media (max-width: 500px) {
+  /* Hide the welcome text on mobile */
+  .welcome-texts {
+    display: none;
+  }
+
+  /* Show the hamburger icon on mobile */
+  .hamburger-icon {
+    display: block;
+  }
+  
+  #welcome-section h1 {
+    font-size: 0.85rem; /* Even smaller for very small screens */
+  }
+
+  #toggleSidebar {
+    width: 100%; /* Full width button on mobile */
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
 }
 
 #toggleSidebar:hover {
-  background-color: darkgrey; /* Change color on hover if desired */
-  border-radius: 25px;       /* More rounded corners on hover */
+  /* Hover background change */
+  background-color: darkgrey;
 }
+
+/* Sidebar styling */
 .sidebar {
-  /* width: 250px; */
   position: fixed;
   /* Initially hidden */
   left: -250px;
   top: 0;
+  /* Sidebar height */
   height: 22%;
+  /* Dark background */
   background-color: #343a40;
+  /* Text color */
   color: #ffffff;
+  /* Smooth opening/closing transition */
   transition: left 0.3s ease;
+  /* Sidebar padding */
   padding: 40px;
   z-index: 2;
-  /* Add rounded corners */
-  border-radius: 0px 0px 50px 0px; /* top-left, top-right, bottom-right, bottom-left */
+  /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 0px 0px 50px 0px;
+}
+
+.sidebar.open {
+  /* Reveal sidebar */
+  left: 0;
 }
 
 .sidebar ul {
+  /* Removing default bullet points */
   list-style-type: none;
   padding: 0;
 }
 
 .sidebar ul li {
+  /* Space between list items */
   padding: 10px 0;
 }
 
 .sidebar ul li a {
+  /* Links in sidebar */
   color: #ffffff;
+  /* Removing underline */
   text-decoration: none;
 }
 
-.sidebar.open {
-  left: 0; /* Show the sidebar */
-}
-
+/* Text styling */
 p {
   margin: 0;
+  /* Setting line height */
   line-height: 1.5em;
 }
 
 a {
+  /* Removing underline for links */
   text-decoration: none;
 }
 
 li {
+  /* Removing list styles globally */
   list-style: none;
 }
+
 span {
+   /* Font family for spans */
   font-family: "Roboto", sans-serif;
 }
 
+/* Container styling */
 .container {
   max-width: 1400px;
   width: 100%;
@@ -97,6 +190,7 @@ span {
   margin: auto;
 }
 
+/* Section styling */
 .section {
   color: #fff;
   margin: 15px 0;
@@ -108,6 +202,7 @@ span {
   }
 }
 
+/* Background image styling */
 .bg-img {
   background-image: url(../img/bg.png);
   background-position: center;
@@ -121,28 +216,27 @@ span {
   width: 100%;
   height: 100%;
   z-index: 0;
+  /* Semi-transparent background */
   opacity: 0.2;
   aspect-ratio: 4096/2304;
 }
 
-.title  
- {
+/* Title, subtitle, profession text styles */
+.title, .subtitle, .profession {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 900;
+}
+
+.title {
   font-size: 1.7rem;
 }
 
 .subtitle {
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 900;
   font-size: 1.5rem;
-
   margin-top: 10px;
 }
 
 .profession {
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 900;
   font-size: 1.3rem;
   text-align: center;
   margin-bottom: 30px;
@@ -162,6 +256,7 @@ span {
   }
 }
 
+/* Description styling */
 .description {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
@@ -174,6 +269,7 @@ span {
   }
 }
 
+/* Hero button */
 #hero {
   position: fixed;
   bottom: 10px;
@@ -198,6 +294,7 @@ span {
   color: #000;
 }
 
+/* Header bar styling */
 .header-bar {
   position: fixed;
   top: 0;
@@ -209,45 +306,44 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  background: rgb(0, 0, 0);
+  /* flex-direction: row; */
+  background: #000;
 }
 
 .header-bar .nome {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.2rem;
-  position: relative;
+  /* position: relative; */
 }
 
 .header-bar .social-media {
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-bar .social-media.social-media .social-item .fab,
-.header-bar .social-media.social-media .social-item .fas {
+.header-bar .social-media .fab, .header-bar .social-media .fas {
   font-size: 1.2rem;
   margin: 0 10px;
   transition: transform 350ms ease;
 }
 
-.social-media .social-item .fab:hover,
-.social-media .social-item .fas:hover {
+
+.header-bar .social-media .fab:hover, .header-bar .social-media .fas:hover {
   transform: translateY(5px);
 }
 
+/* Navigation menu (Desktop) */
 .menu-top .nav-top {
   margin: 0 auto;
   width: 100%;
   padding: 5px 0;
-
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
-  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -263,7 +359,7 @@ span {
   width: 1000px;
   height: 40px;
   margin: 0 auto;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .menu-top .nav-top .menu .item {
@@ -294,42 +390,42 @@ span {
   width: 100%;
 }
 
+/* Home section */
 .menu-top .home {
   margin-top: 40px;
   height: 35vh;
-  position: relative;
-  z-index: 1;
-  padding: 0 15px;
+  /* position: relative; */
+  /* z-index: 1; */
+  /* padding: 0 15px; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-@media (min-width: 1250px) {
-  .menu-top .home {
-    height: 70vh;
-  }
-}
+
 @media (min-width: 1024px) {
   .menu-top .home {
     height: 55vh;
   }
 }
 
+/* @media (min-width: 1250px) { */
+  /* .menu-top .home { */
+    /* height: 70vh; */
+  /* } */
+/* } */
+
+/* Profile photo logo */
 .menuphotoLogo {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.purpletText {
-  color: aqua;
-}
-
 .photoLogo {
   width: 300px;
-  height: 85;
+  /* height: 85; */
   border-radius: 10px;
   padding: 5px;
 }
@@ -349,6 +445,7 @@ span {
   }
 }
 
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 @media (min-width: 1250px) {
   .menu-top .home .img {
     width: 300px;
@@ -394,6 +491,7 @@ span {
   }
 }
 
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 main {
   position: relative;
   padding: 10px 15px;
@@ -401,7 +499,6 @@ main {
   z-index: 5;
   border-radius: 10px;
   background: rgba(157, 198, 255, 0.3);
-  /*background-color: #4516d8*/
 }
 
 @media (min-width: 1024px) {
@@ -411,6 +508,7 @@ main {
   }
 }
 
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 @media (min-width: 1250px) {
   main {
     margin: 0 120px 40px;
@@ -717,7 +815,15 @@ main {
 .skills .description {
   font-size: 1.2rem;
 }
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 
+
+.purpletText {
+  color: aqua;
+}
+
+
+/* Footer bar styling */
 .footer-bar {
   position: fixed;
   bottom: 0;
@@ -730,34 +836,35 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background: rgb(0, 0, 0);
+  background: #000;
 }
 
 .footer-bar .nome {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.2rem;
-  position: relative;
+  /* position: relative; */
 }
 
-/* language-toggle */
+/* Language toggle */
 select#language-toggle {
-  max-width: 150px; /* Adjust the width as needed */
+  /* Adjust the width as needed */
+  max-width: 140px;
 }
 
 #language-toggle {
-  background-color: transparent; /* Transparent background */
-  color: white; /* Black text */
-  border: 1px solid black; /* Black border, customizable */
-  padding: 5px; /* Internal spacing */
-  border-radius: 2px; /* Rounded corners */
-  font-size: 14px; /* Font size */
-  cursor: pointer; /* Change cursor on hover */
-  /*appearance: none; */ /* Remove default browser appearance */
+  background-color: transparent; 
+  color: white; 
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 12px;
+  cursor: pointer; 
 }
 
 #language-toggle option {
-  background-color: white; /* White background for options */
-  color: black; /* Black text for options */
+  background-color: white;
+  color: black;
+  font-size: 12px;
 }
 
 /* Media query for mobile devices */
@@ -822,52 +929,121 @@ select#language-toggle {
   border-color: #ccc; /* Darker border color on hover */
 }
 
+
+/* Timezone table styles */
 .timezone-table {
-  /* Center align the table content */
-  /* text-align: center; */
-  /* Center the table with margins */
-  /* margin: 20px auto; */
-  /* Make the table take the full width of the section */
-  width: 100%; /* Full width */
-  overflow: auto; /* Enable scrolling if needed */
-  /* Use flexbox for centering */
-  /* display: flex; */
-  justify-content: center; /* Center the content */
-  padding: 20px; /* Optional padding around the table */
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+.timezone-table h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styling for the table */
 .timezone-table table {
-  width: 100%;         /* Make sure the table also takes full width */
-  max-width: 1200px; /* Maximum width for large screens (optional) */
+  /* Make sure the table also takes full width */
+  width: 100%;
+  /* Maximum width for large screens (optional) */
+  max-width: 1200px;
   border-collapse: collapse; /* Remove space between cells */
-  border-radius: 10px; /* Round corners */
-  overflow: hidden; /* Prevent overflow of rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: light shadow for depth */
+  /* Optional: light shadow for depth */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  /* Round corners */
+  /* border-radius: 10px;  */
+  /* Prevent overflow of rounded corners */
+  /* overflow: hidden; */
+  margin: 0 auto;
 }
 
-.timezone-table th, 
-.timezone-table td {
-  border: 1px solid #ddd; /* Light gray border */
+.timezone-table th, .timezone-table td {
   /* Padding for table cells */
-  padding: 10px;      /* Add padding for better spacing */
-  text-align: left;   /* Align text to the left */
-  border: 1px solid #ddd; /* Add borders for readability */
+  /* Add padding for better spacing */
+  padding: 15px;
+  /* Align text to the left */
+  text-align: left;
+  /* Add borders for readability */
+  border: 1px solid #ddd;
 }
 
+/* Header styling */
 .timezone-table th {
   /* Light gray background for headers */
   background-color: #000;
+  /* background-color: #343a40; */
+  color: #fff;
+  text-align: left;
 }
 
 .timezone-table tr:nth-child(even) {
-  /* Alternate row color */
+  /* Alternate row colors for readability */
   background-color: #000;
 }
 
+/* Media query for screens wider than 1280px */
+@media (min-width: 1280px) {
+  .timezone-table table {
+    /* Increase max-width on large screens */
+    max-width: 1400px;
+    /* Ensure the table is centered */
+    margin-left: auto;
+    /* Ensure the table is centered */
+    margin-right: auto;
+  }
+}
+
+.timezone-table {
+  max-width: 100%; /* Ensures it doesn't overflow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .timezone-table table {
+    /* Make the table scrollable horizontally */
+    display: block;
+    overflow-x: auto;
+    /* Prevent line wrapping inside cells */
+    /* white-space: nowrap; */
+  }
+
+  .timezone-table th, .timezone-table td {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .timezone-table thead {
+    display: none; /* Hide the table header on small screens */
+  }
+
+  .timezone-table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+
+  .timezone-table td {
+    text-align: right;
+    position: relative;
+    padding-left: 20%;
+  }
+
+  .timezone-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+  }
+}
+
 #current-time {
-  /* Set a larger font size for the current time */
+  /* Font size for current time */
   font-size: 20px;
-  /* Spacing below the current time */
+  /* Font size for current time */
   margin-bottom: 20px;
 }
