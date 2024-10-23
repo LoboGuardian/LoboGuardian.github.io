@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page | LoboGuardian</title>
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preload" as="image" href="https://github.com/loboguardian.png"/>
+    <script src="./assets/js/language.js" defer></script>
+  </head>
+
+  <body>
+    <a href="#home" id="hero"><i class="fas fa-angle-up"></i></a>
+    <div class="bg-img"></div>
+    
+    <header class="header-bar">
+      <div>
+        <button id="toggleSidebar">
+          <h1 class="lang-es">¡Bienvenido al Mundo de Internet! 🐺</h1>
+          <h1 class="lang-en">Welcome to the World of the Internet! 🐺</h1>
+          <h1 class="lang-pt">Bem-vindo ao Mundo da Internet! 🐺</h1>
+          <h1 class="lang-de">Willkommen in der Welt des Internets! 🐺</h1>
+          <h1 class="lang-fr">Bienvenue dans le monde de l'Internet! 🐺</h1>
+          <h1 class="lang-it">Benvenuto nel mondo di Internet! 🐺</h1>
+          <h1 class="lang-zh">欢迎来到互联网的世界！🐺</h1>
+          <h1 class="lang-ar">مرحبًا بك في عالم الإنترنت! 🐺</h1>
+          <h1 class="lang-ru">Добро пожаловать в мир Интернета! 🐺</h1>
+          <h1 class="lang-ja">インターネットの世界へようこそ！ 🐺</h1>
+          <h1 class="lang-ko">인터넷 세계에 오신 것을 환영합니다! 🐺</h1>
+          <h1 class="lang-hi">इंटरनेट की दुनिया में आपका स्वागत है! 🐺</h1>
+        </button>
+      </div>
+      
+      <ul class="social-media">
+        <li class="social-item">
+          <a
+            href="https://www.linkedin.com/in/gonzalezrbx/"
+            target="_blank"
+            alt="linkedin"
+            >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+          href="https://twitter.com/loboguardian_"
+          target="_blank"
+          alt="twitter"
+          >
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+              
+      <li class="social-item">
+        <a
+        href="https://www.instagram.com/lobo_steam"
+        target="_blank"
+        alt="instagram"
+        >
+        <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <li class="social-item">
+        <a
+        href="https://github.com/loboguardian"
+        target="_blank"
+            alt="github"
+            >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <!-- Menú desplegable para cambiar idioma -->
+          <select id="language-toggle">
+            <option value="es" selected>🇪🇸 Español (Spanish)</option>
+            <option value="en">🇺🇸 English (English)</option>
+            <option value="pt">🇧🇷 Português (Portuguese)</option>
+            <option value="de">🇩🇪 Deutsch (German)</option>
+            <option value="fr">🇫🇷 Français (French)</option>
+            <option value="it">🇮🇹 Italiano (Italian)</option>
+            <option value="zh">🇨🇳 中文 (Chinese)</option>
+            <option value="ar">🇸🇦 العربية (Arabic)</option>
+            <option value="ru">🇷🇺 Русский (Russian)</option>
+            <option value="ja">🇯🇵 日本語 (Japanese)</option>
+            <option value="ko">🇰🇷 한국어 (Korean)</option>
+            <option value="hi">🇮🇳 हिन्दी (Hindi)</option>
+          </select>
+        </li>
+      </ul>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-u-url.html">URL</a></li>
+        <li><a href="index-u-time.html">TimeZone</a></li>
+      </ul>
+  </aside>
+   
+    <nav class="menu-top" id="home">
+      <section class="home">
+        <div class="img">
+          <img src="https://github.com/loboguardian.png" class="foto" />
+        </div>
+      </section>
+    </nav>
+    
+    <main>
+        <section class="timezone-table">
+            <h4 class="links-heading lang-en">Time Zones</h4>
+            <div id="current-time" class="current-time"></div>
+            <table class="lang-en">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Time Zone</th>
+                        <th>UTC Offset</th>
+                        <th>Current Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Los Angeles</td>
+                        <td>Pacific Standard Time (PST)</td>
+                        <td>UTC -8 / UTC -7 (DST)</td>
+                        <td class="la-time"></td>
+                    </tr>
+                    <tr>
+                        <td>New York</td>
+                        <td>Eastern Standard Time (EST)</td>
+                        <td>UTC -5 / UTC -4 (DST)</td>
+                        <td class="ny-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Panama City</td>
+                        <td>Eastern Standard Time (EST)</td>
+                        <td>UTC -5</td>
+                        <td class="panama-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Caracas</td>
+                        <td>Venezuelan Standard Time (VET)</td>
+                        <td>UTC -4</td>
+                        <td class="caracas-time"></td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td>Brasilia Time (BRT)</td>
+                        <td>UTC -3</td>
+                        <td class="sp-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Buenos Aires</td>
+                        <td>Argentina Time (ART)</td>
+                        <td>UTC -3</td>
+                        <td class="ba-time"></td>
+                    </tr>                    
+                    <tr>
+                        <td>London</td>
+                        <td>Greenwich Mean Time (GMT) / British Summer Time (BST)</td>
+                        <td>UTC +0 / UTC +1 (DST)</td>
+                        <td class="london-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Berlin</td>
+                        <td>Central European Time (CET) / Central European Summer Time (CEST)</td>
+                        <td>UTC +1 / UTC +2 (DST)</td>
+                        <td class="berlin-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Madrid</td>
+                        <td>Central European Time (CET) / Central European Summer Time (CEST)</td>
+                        <td>UTC +1 / UTC +2 (DST)</td>
+                        <td class="madrid-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>Central European Time (CET) / Central European Summer Time (CEST)</td>
+                        <td>UTC +1 / UTC +2 (DST)</td>
+                        <td class="paris-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Rome</td>
+                        <td>Central European Time (CET) / Central European Summer Time (CEST)</td>
+                        <td>UTC +1 / UTC +2 (DST)</td>
+                        <td class="rome-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Cairo</td>
+                        <td>Eastern European Time (EET) / Eastern European Summer Time (EEST)</td>
+                        <td>UTC +2 / UTC +3 (DST)</td>
+                        <td class="cairo-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Moscow</td>
+                        <td>Moscow Standard Time (MSK)</td>
+                        <td>UTC +3</td>
+                        <td class="moscow-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Istanbul</td>
+                        <td>Türkiye Time (TRT)</td>
+                        <td>UTC +3</td>
+                        <td class="turkiye-time"></td>
+                    </tr>
+                    <tr>
+                        <td>New Delhi</td>
+                        <td>Indian Standard Time (IST)</td>
+                        <td>UTC +5:30</td>
+                        <td class="delhi-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Kuala Lumpur</td>
+                        <td>Malaysia Standard Time (MYT)</td>
+                        <td>UTC +8</td>
+                        <td class="kl-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Beijing</td>
+                        <td>China Standard Time (CST)</td>
+                        <td>UTC +8</td>
+                        <td class="beijing-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Seoul</td>
+                        <td>Korea Standard Time (KST)</td>
+                        <td>UTC +9</td>
+                        <td class="seoul-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Tokyo</td>
+                        <td>Japan Standard Time (JST)</td>
+                        <td>UTC +9</td>
+                        <td class="tokyo-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Sydney</td>
+                        <td>Australian Eastern Standard Time (AEST) / Australian Eastern Daylight Time (AEDT)</td>
+                        <td>UTC +10 / UTC +11 (DST)</td>
+                        <td class="sydney-time"></td>
+                    </tr>
+                </tbody>
+            </table>
+      </section>
+
+  <section>
+    <div class="menuphotoLogo">
+      <p class="description lang-es">
+        Desarrollado en 
+        <a href="https://www.linkedin.com/company/jarwarez/"> 
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-en">
+        Developed at 
+        <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-pt">
+        Desenvolvido na
+        <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-de">
+        Entwickelt bei <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-fr">
+        Développé chez <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-it">
+        Sviluppato presso <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-zh">
+        在 <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a> 开发
+      </p>
+      <p class="description lang-ar">
+        تم تطويره في <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-ru">
+        Разработано в <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-ja">
+        で開発されました <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>
+      </p>
+      <p class="description lang-ko">
+        <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a>에서 개발됨
+      </p>
+      <p class="description lang-hi">
+        <a href="https://www.linkedin.com/company/jarwarez/">
+          <span class="description purpletText">
+            JARwareZ
+          </span>
+        </a> में विकसित
+      </p>
+    </section>
+    &copy; <span id="year-now"></span> Rafael González <span id="version-list"></span>
+
+</main>
+
+<script>
+    function updateTime() {
+        const timezones = {
+            'la-time': 'America/Los_Angeles',
+            'ny-time': 'America/New_York',
+            'panama-time': 'America/Panama',
+            'caracas-time': 'America/Caracas',
+            'sp-time': 'America/Sao_Paulo',
+            'ba-time': 'America/Argentina/Buenos_Aires',
+            'london-time': 'Europe/London',
+            'berlin-time': 'Europe/Berlin',
+            'madrid-time': 'Europe/Madrid',
+            'paris-time': 'Europe/Paris',
+            'rome-time': 'Europe/Rome',
+            'cairo-time': 'Africa/Cairo',
+            'moscow-time': 'Europe/Moscow',
+            'turkiye-time': 'Europe/Istanbul',
+            'delhi-time': 'Asia/Kolkata',
+            'kl-time': 'Asia/Kuala_Lumpur',
+            'beijing-time': 'Asia/Shanghai',
+            'seoul-time': 'Asia/Seoul',
+            'tokyo-time': 'Asia/Tokyo',
+            'sydney-time': 'Australia/Sydney'
+        };
+        
+        for (let className in timezones) {
+            const options = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+                timeZone: timezones[className], // Set time zone based on class name
+            };
+            
+            // Create a localized string for the specified time zone
+            const localTime = new Intl.DateTimeFormat([], options).format(new Date());
+            
+            // Update the HTML element with the local time
+            document.querySelector(`.${className}`).innerText = localTime;
+        }
+    }
+    
+    // Update time every second
+    setInterval(updateTime, 1000);
+    updateTime(); // Initial call to display the time immediately
+</script>
+
+<!-- <script>
+    function updateTime() {
+        const now = new Date();
+        const options = {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            timeZoneName: 'short'
+        };
+        const formattedTime = now.toLocaleTimeString(undefined, options);
+        document.getElementById('current-time').innerText = `Current Time: ${formattedTime}`;
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+    updateTime(); // Initial call to display the time immediately
+</script> -->
+
+<script>
+  document.getElementById('toggleSidebar').onclick = function() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+  };
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/script.js" async></script>
+  </body>
+</html>
