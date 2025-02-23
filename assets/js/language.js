@@ -1,31 +1,74 @@
-document.addEventListener("DOMContentLoaded", function () {
-  
+/**
+ * @fileoverview Language Toggle Implementation
+ * This script manages language switching on the client-side, adapting content based on user preference or browser defaults.
+ * It utilizes a dropdown menu to allow users to select from a predefined set of supported languages.
+ *
+ * @author [LoboGuardian]
+ * @version 1.0.0
+ * @requires DOMContentLoaded event
+ */
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  /**
+   * @type {HTMLSelectElement}
+   * @description The dropdown element used for language selection.
+   */
   const languageToggle = document.getElementById("language-toggle");
-  const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];
-  
-  // Determine user's preferred language or fallback
-  const userLang = navigator.language.split('-')[0];
-  const defaultLang = supportedLanguages.includes(userLang) ? userLang : "es";
-  
-  // Initialize language setting
+
+/**
+   * @type {string[]}
+   * @description An array of supported language codes (ISO 639-1).
+   */
+const supportedLanguages = ["es", "en", "pt", "de", "fr", "it", "zh", "ar", "ru", "ja", "ko", "hi"];
+
+/**
+ * @type {string}
+ * @description The user's preferred language, determined by the browser's language settings.
+ */
+const userLang = navigator.language.split("-")[0];
+
+/**
+ * @type {string}
+ * @description The default language, falling back to 'es' if the user's language is not supported.
+ */
+const defaultLang = supportedLanguages.includes(userLang) ? userLang : "es";
+
+/**
+ * @function initializeLanguage
+ * @description Initializes the language setting based on the user's preferred language or the default.
+ */
+const initializeLanguage = () => {
   setLanguage(defaultLang);
-  
-  // Event Listener for language change
-  languageToggle.addEventListener("change", (event) => {
-    setLanguage(event.target.value);
-  });
-  
-  // Function to set displayed language
-  function setLanguage(lang) {
-    // Hide all language elements, then show the selected language
-    supportedLanguages.forEach((language) => {
-      const elements = document.querySelectorAll(`.lang-${language}`);
-      elements.forEach((element) => {
-        element.style.display = (language === lang) ? "block" : "none";
-      });
+};
+
+/**
+ * @function handleLanguageChange
+ * @description Event handler for language selection changes.
+ * @param {Event} event - The change event object.
+ */
+const handleLanguageChange = (event) => {
+  setLanguage(event.target.value);
+};
+
+/**
+ * @function setLanguage
+ * @description Sets the displayed language by toggling the visibility of language-specific elements.
+ * @param {string} lang - The language code to set.
+ */
+const setLanguage = (lang) => {
+  supportedLanguages.forEach((language) => {
+    const elements = document.querySelectorAll(`.lang-${language}`);
+    elements.forEach((element) => {
+      element.style.display = language === lang ? "block" : "none";
     });
-    
-    // Update the dropdown value to selected language
-    languageToggle.value = lang;
-  }
+  });
+  languageToggle.value = lang;
+};
+
+// Initialization
+initializeLanguage();
+
+// Event Listener
+languageToggle.addEventListener("change", handleLanguageChange);
 });
