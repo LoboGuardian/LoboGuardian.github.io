@@ -55,8 +55,7 @@
    */
   const calculatePatchVersion = (date) => {
     const dayOfWeek = date.getUTCDay();
-    return (dayOfWeek + 1);
-   /* return (dayOfWeek + 1) * 3;*?
+    return (dayOfWeek + 1) * 3;
   };
   
   /**
